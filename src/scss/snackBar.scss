@@ -1,0 +1,21 @@
+.snackBar-shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08) !important;
+}
+.success-SnackBar{
+  background-color: #51a351;
+  color: #ffffff;
+  border-radius: 10px;
+  @extend .snackBar-shadow
+}
+.error-snackBar {
+  color: #ffffff;
+  background-color: #bd362f;
+  border-radius: 10px;
+  @extend .snackBar-shadow 
+}
+.warning-snackBar {
+  color: #ffffff;
+  background-color: #f89406;
+  border-radius: 10px;
+  @extend .snackBar-shadow
+}

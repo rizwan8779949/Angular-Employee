@@ -1,0 +1,45 @@
+<mat-sidenav-container class="example-container" autosize>
+  <mat-sidenav class="example-sidenav" mode="side" opened="true">
+    <div class="logo-div">
+      <img src="../../../assets/images/Angular-logo.svg" width="150" />
+    </div>
+    <div class="white-space-line"></div>
+    <mat-nav-list>
+      <mat-list-item
+        (click)="goto('home/dashboard/dashboard')"
+        [ngClass]="{ activeLink: routingActive == 'Dashboard' }"
+      >
+        <a class="d-flex" routerLinkActive="activeRoutLink">
+          <mat-icon mat-list-icon>dashboard</mat-icon>
+          <h4>Dashboard</h4>
+        </a>
+      </mat-list-item>
+      <mat-list-item
+        (click)="goto('home/employee/employeeList')"
+        [ngClass]="{ activeLink: routingActive == 'Employee' }"
+      >
+        <a class="d-flex" routerLinkActive="activeRoutLink">
+          <mat-icon mat-list-icon>person</mat-icon>
+          <h4>Employee</h4>
+        </a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-toolbar color="primary">
+    <div class="row w-100">
+      <div class="col-lg-9">
+        <span>{{ pageTitle | titlecase }}</span>
+      </div>
+      <div class="col-lg-3 text-right">
+        <button mat-button [matMenuTriggerFor]="menu">XYZ Nonav <img src="../../../assets/images/profileImage.png" class="profileImage"/></button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="logout()">Log out</button>
+        </mat-menu>
+      </div> 
+    </div>
+  </mat-toolbar>
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-sidenav-container>

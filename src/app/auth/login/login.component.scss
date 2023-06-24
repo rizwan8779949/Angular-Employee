@@ -1,0 +1,21 @@
+@import "../../../scss/variable.scss";
+
+.custom-row {
+  justify-content: center;
+  padding-top: 15%;
+}
+.bg-image {
+  height: 100vh;
+  background-color: $backgroundColor;
+}
+.mat-card-class{
+  width: 35%;
+}
+
+.before-login-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.mat-form-field {
+  font-size: 12px;
+}  

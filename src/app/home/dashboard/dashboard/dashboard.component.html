@@ -1,0 +1,64 @@
+<div class="mt-3">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-lg-6">
+          <mat-card class="mt-3 shadow">
+            <mat-card-content>
+              <div class="dashboardCountHeading">Total Employee</div>
+              <p class="dashboardCount">{{ employeeDataArrayList.length }}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-lg-6">
+          <mat-card class="mt-3 shadow">
+            <mat-card-content>
+              <div class="dashboardCountHeading">Task Status (To-Do)</div>
+
+              <p class="dashboardCount">{{ toDoStatusList.length }}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-lg-6">
+          <mat-card class="mt-3 shadow">
+            <mat-card-content>
+              <div class="dashboardCountHeading">Task Status (In-Progress)</div>
+
+              <p class="dashboardCount">{{ inProgressStatusList.length }}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-lg-6">
+          <mat-card class="mt-3 shadow">
+            <mat-card-content>
+              <div class="dashboardCountHeading">Task Status (Done)</div>
+
+              <p class="dashboardCount">{{ doneStatusList.length }}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-lg-6">
+          <mat-card class="mt-3 shadow">
+            <mat-card-content>
+              <div class="dashboardCountHeading">Task Status (Reopen)</div>
+
+              <p class="dashboardCount">{{ reOpenStatusList.length }}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <mat-card class="mt-3 shadow" style="min-height: 475px">
+        <div class="dashboardCountHeading mt-3 ml-3 mb-1">Top 10 Employees</div>
+        <hr />
+        <div class="overflow-auto" style="margin-top: -12px">
+          <app-topemployee-list
+            [empArrayList]="topTenEmployeeList"
+          ></app-topemployee-list>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
